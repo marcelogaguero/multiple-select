@@ -1,0 +1,29 @@
+{
+  "name": "multiple-select",
+  "version": "1.0.0",
+  "description": "Directiva de angular para administrar datos entre dos elementos select de selección multiple",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelogaguero/multiple-select.git"
+  },
+  "keywords": [
+    "angularjs",
+    "directive",
+    "select",
+    "multiple"
+  ],
+  "author": "Marcelo Agüero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcelogaguero/multiple-select/issues"
+  },
+  "homepage": "https://github.com/marcelogaguero/multiple-select#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "jquery": "^3.2.1"
+  }
+}
