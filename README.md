@@ -8,24 +8,22 @@ EL modulo contiene una directiva para el manejo de datos entre dos elementos sel
 3) Usar la directiva
 
 ```html
-<div class="container" ng-controller="main">
-  <div class="main multiple-select" data-key="id" data-value="title">
-    <div class="available">
-      <select multiple>
-        <option ng-attr-value="{{val}}" ng-repeat="val in values">{{val}}</option>
-      </select>
-    </div>
-    <div class="center">
-      <br>
-      <a class="right" href="javascript: void(0);"><i class="fa fa-arrow-circle-o-right"></i></a>
-      <br>
-      <a class="left" href="javascript: void(0)"><i class="fa fa-arrow-circle-o-left"></i></a>
-    </div>
-    <div class="selected">
-      <select model="options" multiple>
-        <option ng-repeat="item in options" ng-attr-value="{{item.id}}">{{item.title}}</option>
-      </select>
-    </div>
+<div class="main multiple-select" data-key="id" data-value="title">
+  <div class="available">
+    <select multiple>
+      <option ng-attr-value="{{val}}" ng-repeat="val in values">{{val}}</option>
+    </select>
+  </div>
+  <div class="center">
+    <br>
+    <a class="right" href="javascript: void(0);"><i class="fa fa-arrow-circle-o-right"></i></a>
+    <br>
+    <a class="left" href="javascript: void(0)"><i class="fa fa-arrow-circle-o-left"></i></a>
+  </div>
+  <div class="selected">
+    <select model="options" multiple>
+      <option ng-repeat="item in options" ng-attr-value="{{item.id}}">{{item.title}}</option>
+    </select>
   </div>
 </div>
 ```
