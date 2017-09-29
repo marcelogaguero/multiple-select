@@ -1,0 +1,44 @@
+
+select {
+  width: 100%
+}
+
+.center {
+  width: 10%;
+  float: left;
+  text-align: center;
+}
+
+.available,
+.selected {
+  width: 40%;
+  float: left;
+}
+
+.view {
+  clear: both;
+  padding-top: 10px;
+}
+
+.view ul {
+  list-style: none;
+}
+
+.view ul li {
+  width: 40px;
+  float: left;
+  border: 1px solid #CCC;
+  padding: 3px;
+  text-align: center;
+  margin-left: 2px;
+  background-color: #225e75;
+  color: white;
+  border-radius: 5px;
+  box-shadow: -2px 2px 5px 0px #424242;
+}
+
+.view h2 {
+  color: #424242;
+  border-bottom: 1px solid;
+}
+
