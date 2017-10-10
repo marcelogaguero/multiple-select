@@ -33988,13 +33988,13 @@ $provide.value("$locale", {
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var angular = __webpack_require__(0),
-    $ = __webpack_require__(5);
+var angular = __webpack_require__(0),
+    $ = __webpack_require__(4);
 
-module.export = [function(){
+module.exports = ['$timeout', '$parse', function ($timeout, $parse){
+
   return {
     link: function ($scope, $element, $attr) {
-
       var available = $element.find("select").eq(0);
       var selected = $element.find("select").eq(1);
 
@@ -34016,7 +34016,7 @@ module.export = [function(){
         });
       }
 
-      $element.find("a").eq(0).on('click', function () {
+      $($element).find(".right").eq(0).on('click', function () {
         $scope.$apply(function () {
           var options = $(available).find(":selected");
           var values = getter($scope);
@@ -34031,7 +34031,7 @@ module.export = [function(){
         })
       });
 
-      $element.find("a").eq(1).on('click', function () {
+      $($element).find(".left").eq(0).on('click', function () {
         var options = $(selected).find(":selected");
         for (var x = 0; x < options.length; x++) {
           var item = $(options[x]);
@@ -34063,40 +34063,13 @@ module.export = [function(){
 
     },
     restrict: 'C'
+
   }
-}]
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+}];
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if(!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if(!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -44357,3 +44330,4 @@ return jQuery;
 
 /***/ })
 /******/ ]);
+//# sourceMappingURL=app.js.map

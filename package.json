@@ -5,7 +5,7 @@
   "main": "dist/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack ./index.js ./dist/app.js"
+    "build": "webpack --progress --debug --devtool source-map ./index.js ./dist/app.js"
   },
   "repository": {
     "type": "git",

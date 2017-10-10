@@ -1,10 +1,10 @@
 var angular = require('angular'),
     $ = require('jquery');
 
-module.export = [function(){
+module.exports = ['$timeout', '$parse', function ($timeout, $parse){
+
   return {
     link: function ($scope, $element, $attr) {
-
       var available = $element.find("select").eq(0);
       var selected = $element.find("select").eq(1);
 
@@ -26,7 +26,7 @@ module.export = [function(){
         });
       }
 
-      $element.find("a").eq(0).on('click', function () {
+      $($element).find(".right").eq(0).on('click', function () {
         $scope.$apply(function () {
           var options = $(available).find(":selected");
           var values = getter($scope);
@@ -41,7 +41,7 @@ module.export = [function(){
         })
       });
 
-      $element.find("a").eq(1).on('click', function () {
+      $($element).find(".left").eq(0).on('click', function () {
         var options = $(selected).find(":selected");
         for (var x = 0; x < options.length; x++) {
           var item = $(options[x]);
@@ -73,5 +73,7 @@ module.export = [function(){
 
     },
     restrict: 'C'
+
   }
-}]
+
+}];
