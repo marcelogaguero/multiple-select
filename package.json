@@ -5,7 +5,8 @@
   "main": "dist/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress --debug --devtool source-map ./index.js ./dist/app.js"
+    "build": "webpack --progress --debug --devtool source-map ./index.js ./dist/app.js",
+    "build-min": "webpack --config ./config/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "jquery": "^3.2.1"
   },
   "devDependencies": {
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
     "webpack": "^3.6.0"
   }
 }
