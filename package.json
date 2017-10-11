@@ -2,11 +2,11 @@
   "name": "multiple-select",
   "version": "1.0.0",
   "description": "Directiva de angular para administrar datos entre dos elementos select de selección multiple",
-  "main": "dist/app.js",
+  "main": "dist/multi.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress --debug --devtool source-map ./index.js ./dist/app.js",
-    "build-min": "webpack --config ./config/webpack.config.js"
+    "build-dev": "webpack --config ./config/webpack.config.js",
+    "build-prod": "webpack --config ./config/webpack.config.js --env.prod"
   },
   "repository": {
     "type": "git",
