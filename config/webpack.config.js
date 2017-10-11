@@ -11,6 +11,10 @@ module.exports = function(env){
       path: path.resolve(__dirname, "../dist"),
       filename: "multi.min.js"
     },
+    externals: {
+      "jquery": "jQuery",
+      "angular": "angular"
+    },
     plugins: [
       new UglifyJSPlugin({})
     ]
@@ -19,8 +23,6 @@ module.exports = function(env){
   if ( env && typeof env.prod !== 'undefined' ){
     config.devtool = "inline-source-map";
   }
-
-  console.log(config);
 
   return config;
 };

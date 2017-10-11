@@ -5,29 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
   <link rel="stylesheet" href="main.css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
   <script src="../dist/multi.min.js" type="text/javascript"></script>
   <script src="main.js" type="text/javascript"></script>
 </head>
 <body ng-controller="main">
-  <div class="main multiple-select" data-key="id" data-value="title">
-    <div class="available">
-      <select multiple>
-      <option ng-attr-value="{{val}}" ng-repeat="val in values">{{val}}</option>
-    </select>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Multiple-select</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+      aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  </nav>
+  <br><br><br><br>
+  <div class="container">
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Multiple-Select <small>Directiva</small></h1>
+        <p>Contents ...</p>
+      </div>
     </div>
-    <div class="center">
-      <br>
-      <a class="right" href="javascript: void(0);"><i class="fa fa-arrow-circle-o-right"></i></a>
-      <br>
-      <a class="left" href="javascript: void(0)"><i class="fa fa-arrow-circle-o-left"></i></a>
-    </div>
-    <div class="selected">
-      <select model="options" multiple>
-      <option ng-repeat="item in options" ng-attr-value="{{item.id}}">{{item.title}}</option>
-    </select>
-    </div>
+
+
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="main multiple-select" data-key="id" data-value="title">
+            <div class="available col-md-4">
+              <select multiple>
+                <option ng-attr-value="{{val}}" ng-repeat="val in values">{{val}}</option>
+              </select>
+            </div>
+            <div class="center col-md-1">
+              <br>
+              <a class="right" href="javascript: void(0);"><i class="fa fa-arrow-circle-o-right"></i></a>
+              <br>
+              <a class="left" href="javascript: void(0)"><i class="fa fa-arrow-circle-o-left"></i></a>
+            </div>
+            <div class="selected" class="col-md-4">
+              <select model="options" multiple>
+                <option ng-repeat="item in options" ng-attr-value="{{item.id}}">{{item.title}}</option>
+              </select>
+            </div>
+          </div>
+          </div>
+      </div>
+
   </div>
+
 </body>
 </html>
