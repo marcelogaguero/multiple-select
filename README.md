@@ -3,7 +3,7 @@
 EL modulo contiene una directiva para el manejo de datos entre dos elementos select de selección multiple.
 
 ## Instalar
-1) Descargar el archivo dist/app.js
+1) Descargar el archivo dist/multi.min.js
 2) Incluirlo en tu proyecto
 3) Usar la directiva
 
